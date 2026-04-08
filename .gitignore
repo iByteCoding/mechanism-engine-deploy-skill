@@ -11,3 +11,6 @@ Thumbs.db
 *.tmp
 *.bak
 *.swp
+
+# Auto-generated files
+skill/skill-template/references/ref-00-bundle-spec.md.tpl

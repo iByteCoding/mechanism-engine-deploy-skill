@@ -46,17 +46,7 @@
 
 ---
 
-## 关键约束说明
+## 参考文档
 
-| 约束 | 说明 |
-|------|------|
-| 元数据格式 | SKILL.md frontmatter 只含 `name` 和 `description`，不加其他字段 |
-| SKILL.md 结构 | 必须包含：实体概览（速查+示例类名合并一表）、部署流程（必含 Maven 依赖和执行步骤表格；信息收集/确认步骤按机制需要酌情加入）、验证清单、代码注释规范、占位符说明 |
-| 案例模块隔离 | references 中不出现案例模块的包名、类名、业务常量等具体内容 |
-| 代码占位符 | 统一使用 `{Module}`（类名前缀大写）、`{module}`（小写）、`{模块Key}`、`{modulePrefix}`、`{moduleSuffix}` |
-| 包导入规范 | [ref-00-bundle-spec.md](references/ref-00-bundle-spec.md) — **所有 ref 均须遵守**；集中声明跨模块包导入，按依赖层分组 |
-| ref 拆分策略 | 有 Entity 时以 Entity 为单位组织一个 ref（含 VO/API/Service/Controller）；无 Entity 时单独一个 ref 描述独立能力 |
-| ref 文件内部结构 | 每个代码单元：**核心要点**（说明+表格）→ 代码块（含行内注释）→ **注意事项**列表 |
-| 文件命名 | `ref-{序号}-{语义描述}-{后缀}.md`；后缀规则：机制能力用 `-spec`（如 `ref-01-category-spec.md`），引擎集成用 `-integration`（如 `ref-01-form-integration.md`） |
-| 注释粒度 | 接口方法/Service 公开方法须写 Javadoc；私有辅助方法须写 `/** */`；Entity/VO 非自解释字段须注明含义和约束；行内注释说明"为什么"而非"做什么" |
-| 内容拆分 | SKILL.md 步骤4执行表格链接 ref 文件；Maven 依赖直接在 SKILL.md 展开；细节代码全部放 references |
+- [命名与结构约定](references/ref-00-conventions.md) — 占位符、文件命名规则、ref 拆分原则、内部结构规范
+- [机制类型分类与清单](references/ref-01-catalog.md) — 机制类型说明与已收录 Skill 列表
